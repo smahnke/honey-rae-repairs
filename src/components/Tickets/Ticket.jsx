@@ -1,4 +1,9 @@
+import { useState } from "react"
+
 export const Ticket = ({ticket}) => {
+    const [employees, setEmployees] = useState([])
+    const [assignedEmployee, setAssignedEmployoee] = useState({})
+//stopped video at 21 minute mark
     return (
         <section className="ticket">
             <header className="ticket-info">
