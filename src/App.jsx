@@ -1,4 +1,4 @@
-import { TicketList } from "./components/Tickets/TicketList"
+import { TicketList } from "./components/Tickets/TicketList.jsx"
 
 export const App = () => {
   return (

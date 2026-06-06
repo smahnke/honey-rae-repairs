@@ -1,5 +1,6 @@
 import {useState, useEffect} from "react"
-import { getAllTickets} from "./ticketService"
+import { getAllTickets } from "../../ticketService.js"
+import { Ticket } from "./Ticket.jsx"
 import "./Tickets.css"
 
 export const TicketList = () => {
@@ -46,20 +47,9 @@ export const TicketList = () => {
           </button>       
         </div>
           <article className="tickets">
-            {filteredTickets.map(ticket => {
+            {filteredTickets.map(ticketObj => {
               return (
-                <section className="ticket" key={ticket.id}>
-                  <header className="ticket-info">
-                    #{ticket.id}
-                  </header>
-                  <div>{ticket.description}</div>
-                  <footer>
-                      <div>
-                        <div className="ticket-info">emergency</div>
-                        <div>{ticket.emergency ? "yes" : "no"}</div>
-                      </div>
-                  </footer>
-                </section>
+                <Ticket ticket={ticketObj} name="Joe" key={ticketObj.id}/>
               )
             })}
           </article>
