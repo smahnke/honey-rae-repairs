@@ -1,8 +1,10 @@
+import { CustomerList } from "./components/Customers/CustomerList.jsx"
 import { TicketList } from "./components/Tickets/TicketList.jsx"
 
 export const App = () => {
   return (
-    <TicketList/>
+    //<TicketList/>
+    <CustomerList/>
   )
 }
 
