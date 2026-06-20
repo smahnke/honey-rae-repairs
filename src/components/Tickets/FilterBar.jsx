@@ -1,4 +1,4 @@
-export const filterBar = (setShowEmergencyOnly, setSearchTerm) => {  
+export const FilterBar = (setShowEmergencyOnly, setSearchTerm) => {  
       return (  
         <div className="filter-bar">
           <button 

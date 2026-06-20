@@ -2,7 +2,7 @@ import {useState, useEffect} from "react"
 import { getAllTickets } from "../../services/ticketService.js"
 import { Ticket } from "./Ticket.jsx"
 import "./Tickets.css"
-import { filterBar } from "./FilterBar.jsx"
+import { FilterBar } from "./FilterBar.jsx"
 
 export const TicketList = () => {
   const [allTickets, setAllTickets] = useState([])
@@ -36,7 +36,7 @@ export const TicketList = () => {
     return (
       <div className="tickets-container"> 
         <h2>Tickets</h2>
-        <filterBar setShowEmergencyOnly={setShowEmergencyOnly} setSearchTerm={setSearchTerm}/>
+        <FilterBar setShowEmergencyOnly={setShowEmergencyOnly} setSearchTerm={setSearchTerm}/>
           <article className="tickets">
             {filteredTickets.map(ticketObj => {
               return (
