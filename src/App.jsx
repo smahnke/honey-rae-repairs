@@ -3,6 +3,8 @@ import { TicketList } from "./components/Tickets/TicketList.jsx"
 import { EmployeeList } from "./components/Employees/EmployeeList.jsx"
 import {Routes} from "react-router-dom"
 import { NavBar } from "./components/Nav/NavBar.jsx"
+import {Outlet} from "react-router-dom"
+import { Welcome } from "./components/Welcome/Welcome.jsx"
 
 export const App = () => {
   return (
@@ -16,8 +18,10 @@ export const App = () => {
           </>
         }
       >
+        <Route index element={<Welcome />}/>
         <Route path="tickets" element={<TicketList/>}/>
         <Route path="customers" element={<CustomerList/>} />
+        <Route path="employees" element={<EmployeeList/>} />
       </Route>
     </Routes>
   )
