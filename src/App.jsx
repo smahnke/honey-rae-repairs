@@ -20,8 +20,11 @@ export const App = () => {
       >
         <Route index element={<Welcome />}/>
         <Route path="tickets" element={<TicketList/>}/>
-        <Route path="customers" element={<CustomerList/>} />
         <Route path="employees" element={<EmployeeList/>} />
+        <Route path="customers">
+          <Route index element{CustomerList/>} />
+          <Route path=":customerId" element={<CustomerDetails />} />
+        </Route>
       </Route>
     </Routes>
   )
