@@ -1,12 +1,12 @@
 import {useParams} from "react-router-dom"
 import { useState, useEffect } from "react"
 import { getCustomerByUserId } from "../../services/customerService"
-import "./Customers.css"
+import "./Customer.css"
 
 export const CustomerDetails = () => {
     // /customer/3
     // path="/customers/:customerId"
-    const [customer, setCustomer] = useState[()]
+    const [customer, setCustomer] = useState([])
 
     const {customerId} = useParams() // will return { customerId: 3}
 
